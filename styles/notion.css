@@ -152,6 +152,11 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .title {
+    text-overflow: ellipsis;
+    max-width: 140px;
+    overflow: hidden;
+  }
   .notion-search-button {
     display: none !important;
   }
@@ -159,9 +164,7 @@
 
 @media only screen and (max-width: 500px) {
   .title {
-    text-overflow: ellipsis;
     max-width: 120px;
-    overflow: hidden;
   }
   .notion-header .button {
     padding: 0px;

@@ -163,6 +163,9 @@
     max-width: 120px;
     overflow: hidden;
   }
+  .notion-header .button {
+    padding: 0px;
+  }
 }
 
 @media only screen and (max-width: 400px) {

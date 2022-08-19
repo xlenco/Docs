@@ -224,4 +224,5 @@
 }
 .giscus {
   width: var(--notion-max-width);
+  max-width: 100%;
 }

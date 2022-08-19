@@ -50,7 +50,7 @@ export const FooterImpl: React.FC = () => {
       <Giscus
         id="comments"
         repo="zkeq/Docs"
-        repoId="R_kgDOH2KgCA"
+        repoId="R_kgDOH2LTHQ"
         category="Announcements"
         categoryId="DIC_kwDOH2KgCM4CQ6qT"
         mapping="og:title"

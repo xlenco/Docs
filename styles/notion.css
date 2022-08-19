@@ -116,10 +116,11 @@
 
 .notion-quote {
   padding: .2em .75em;
+  font-size: 1em;
   line-height: 1.8;
   font-weight: 300;
   font-style: inherit;
-   border-left: 4px solid #67bdfc;
+  border-left: 4px solid #67bdfc;
 }
 
 .notion-h1,

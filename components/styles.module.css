@@ -50,7 +50,7 @@
   padding: 8px;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
@@ -212,4 +212,16 @@
 
 .hidden {
   visibility: hidden;
+}
+
+.buttoms {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1100px;
+}
+.giscus {
+  width: var(--notion-max-width);
 }

@@ -13,6 +13,10 @@ import * as config from 'lib/config'
 
 import styles from './styles.module.css'
 
+// giscus
+
+import Giscus from '@giscus/react';
+
 // TODO: merge the data and icons from PageSocial with the social links in Footer
 
 export const FooterImpl: React.FC = () => {
@@ -27,12 +31,42 @@ export const FooterImpl: React.FC = () => {
     [toggleDarkMode]
   )
 
+  let isHome = true
+  if (typeof window !== "undefined") {
+    // browser code
+    isHome = !(window.location.pathname === "/")
+    console.log(isHome)
+  }
+
   React.useEffect(() => {
     setHasMounted(true)
   }, [])
 
   return (
     <footer className={styles.footer}>
+      
+      <div className={styles.giscus}>
+      { isHome &&(
+      <Giscus
+        id="comments"
+        repo="zkeq/Docs"
+        repoId="R_kgDOH2KgCA"
+        category="Announcements"
+        categoryId="DIC_kwDOH2KgCM4CQ6qT"
+        mapping="og:title"
+        term="Welcome to @giscus/react component!"
+        reactionsEnabled="1"
+        emitMetadata="0"
+        inputPosition="top"
+        theme={isDarkMode ? 'dark' : 'light'}
+        lang="zh-CN"
+        loading="lazy"
+      />
+     )}
+     </div>
+      <div className={styles.buttoms}>
+
+
       <div className={styles.copyright}>Copyright 2022 {config.author}</div>
 
       <div className={styles.settings}>
@@ -121,6 +155,7 @@ export const FooterImpl: React.FC = () => {
             <FaYoutube />
           </a>
         )}
+      </div>
       </div>
     </footer>
   )

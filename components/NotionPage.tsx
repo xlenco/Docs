@@ -31,6 +31,10 @@ import { Footer } from './Footer'
 import { NotionPageHeader } from './NotionPageHeader'
 import { GitHubShareButton } from './GitHubShareButton'
 
+
+// notify
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 import styles from './styles.module.css'
 
 // -----------------------------------------------------------------------------
@@ -224,7 +228,9 @@ export const NotionPage: React.FC<types.PageProps> = ({
     rootNotionPageId: site.rootNotionPageId,
     recordMap
   })
-
+  setTimeout(() => {
+    Notify.info('阅读过程中若出现 代码块消失 的情况，请尝试刷新页面哦。');
+  }, 6000);
   if (!config.isServer) {
     // add important objects to the window global for easy debugging
     const g = window as any

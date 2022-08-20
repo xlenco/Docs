@@ -40,6 +40,7 @@
     "next": "^12.2.3",
     "next-api-og-image": "^2.2.1",
     "node-fetch": "^2.6.1",
+    "notiflix": "^3.2.5",
     "notion-client": "^6.12.6",
     "notion-types": "^6.12.6",
     "notion-utils": "^6.12.6",

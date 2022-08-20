@@ -230,7 +230,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
   })
   setTimeout(() => {
     Notify.info('阅读过程中若出现 代码块消失 的情况，请尝试刷新页面哦。');
-  }, 6000);
+  }, 3000);
   if (!config.isServer) {
     // add important objects to the window global for easy debugging
     const g = window as any

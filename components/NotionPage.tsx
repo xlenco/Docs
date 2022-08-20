@@ -31,10 +31,9 @@ import { Footer } from './Footer'
 import { NotionPageHeader } from './NotionPageHeader'
 import { GitHubShareButton } from './GitHubShareButton'
 
-
 // notify
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { Report } from 'notiflix/build/notiflix-report-aio';
+import { Notify } from 'notiflix/build/notiflix-notify-aio'
+import { Report } from 'notiflix/build/notiflix-report-aio'
 
 import styles from './styles.module.css'
 
@@ -229,16 +228,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
     rootNotionPageId: site.rootNotionPageId,
     recordMap
   })
-  // 从 localstorage 里面获取是否已经提醒过
-  const iscodeRemided = localStorage.getItem('iscodeRemided');
-  if (!iscodeRemided) {
-  setTimeout(() => {
-    Notify.info('阅读过程中若出现 代码块消失 的情况，请尝试刷新页面哦。[点击此处不再提醒]',  () => {
-      localStorage.setItem('iscodeRemided', 'true');
-      });
-  }, 3000);
-  
-}
   if (!config.isServer) {
     // add important objects to the window global for easy debugging
     const g = window as any
@@ -261,19 +250,30 @@ export const NotionPage: React.FC<types.PageProps> = ({
     getPageProperty<string>('Description', block, recordMap) ||
     config.description
 
-
-  if (typeof window !== "undefined") {
+  if (typeof window !== 'undefined') {
+    // 从 localstorage 里面获取是否已经提醒过
+    const iscodeRemided = localStorage.getItem('iscodeRemided')
+    if (!iscodeRemided) {
+      setTimeout(() => {
+        Notify.info(
+          '阅读过程中若出现 代码块消失 的情况，请尝试刷新页面哦。[点击此处不再提醒]',
+          () => {
+            localStorage.setItem('iscodeRemided', 'true')
+          }
+        )
+      }, 3000)
+    }
     // 从 localstorage 里面获取是否已经提醒过
     const isReminded = localStorage.getItem('isReminded')
-    if(window.location.hostname !== "docs.icodeq.com"){
+    if (window.location.hostname !== 'docs.icodeq.com') {
       if (isReminded !== 'true') {
         Report.success(
           '温馨提示',
           '您在访问的是备用站点，主站地址：https://docs.icodeq.com',
-          'Okay',
-          );
+          'Okay'
+        )
         localStorage.setItem('isReminded', 'true')
-        }
+      }
     }
   }
 

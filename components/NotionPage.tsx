@@ -256,7 +256,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
     if (!iscodeRemided) {
       setTimeout(() => {
         Notify.info(
-          '阅读过程中若出现 代码块消失 的情况，请尝试刷新页面哦。[点击此处不再提醒]',
+          '阅读过程中若出现 代码块消失 的情况，请尝试刷新页面哦！点击此处不再提醒。',
           () => {
             localStorage.setItem('iscodeRemided', 'true')
           }
@@ -269,7 +269,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
       if (isReminded !== 'true') {
         Report.success(
           '温馨提示',
-          '您在访问的是备用站点，主站地址：https://docs.icodeq.com',
+          '您在访问的是备用站点, 主站地址: https://docs.icodeq.com',
           'Okay'
         )
         localStorage.setItem('isReminded', 'true')

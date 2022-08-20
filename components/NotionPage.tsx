@@ -34,6 +34,7 @@ import { GitHubShareButton } from './GitHubShareButton'
 
 // notify
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { Report } from 'notiflix/build/notiflix-report-aio';
 
 import styles from './styles.module.css'
 
@@ -252,6 +253,17 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const socialDescription =
     getPageProperty<string>('Description', block, recordMap) ||
     config.description
+
+
+  if (typeof window !== "undefined") {
+    if(window.location.hostname !== "docs.icodeq.com"){
+        Report.success(
+          '温馨提示',
+          '您在访问的是备用站点，主站地址：https://docs.icodeq.com',
+          'Okay',
+          );
+    }
+  }
 
   return (
     <>

@@ -256,12 +256,17 @@ export const NotionPage: React.FC<types.PageProps> = ({
 
 
   if (typeof window !== "undefined") {
+    // 从 localstorage 里面获取是否已经提醒过
+    const isReminded = localStorage.getItem('isReminded')
     if(window.location.hostname !== "docs.icodeq.com"){
+      if (isReminded !== 'true') {
         Report.success(
           '温馨提示',
           '您在访问的是备用站点，主站地址：https://docs.icodeq.com',
           'Okay',
           );
+        localStorage.setItem('isReminded', 'true')
+        }
     }
   }
 

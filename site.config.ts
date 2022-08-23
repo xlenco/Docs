@@ -11,14 +11,14 @@ export default siteConfig({
   // basic site info (required)
   name: 'Zkeq の 算法笔记',
   domain: 'docs.icodeq.com',
-  author: 'Zkeq',
+  author: 'xlenco',
 
   // open graph metadata (optional)
   description: 'Hello ya,  这里是 Zkeq  的 算法笔记站。我会将自己学习算法中所学的知识记录在这里。',
 
   // social usernames (optional)
   // twitter: '#',
-  github: 'zkeq',
+  github: 'xlenco',
   // linkedin: 'fisch2',
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`

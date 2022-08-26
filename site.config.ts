@@ -2,19 +2,19 @@ import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: 'd785f81ea8c942f5a769e68c00548c75',
+  rootNotionPageId: '034a5bfa6c394107bcc633201f7324bb',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'Zkeq の 算法笔记',
+  name: ' Xlenco の 算法笔记',
   domain: 'docs.icodeq.com',
   author: 'xlenco',
 
   // open graph metadata (optional)
-  description: 'Hello ya,  这里是 Zkeq  的 算法笔记站。我会将自己学习算法中所学的知识记录在这里。',
+  description: 'Hello ya,  这里是 Xlneco  的 笔记站。我会将自己学习所学的知识记录在这里。',
 
   // social usernames (optional)
   // twitter: '#',
@@ -53,7 +53,7 @@ export default siteConfig({
   navigationLinks: [
     {
       title: 'About',
-      pageId: '0c299307bde94c2ca457535709429465'
+      pageId: '2d27d09b966b4139a809f8594b6d293d'
     }
   ]
 })

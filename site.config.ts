@@ -9,7 +9,7 @@ export default siteConfig({
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: ' Xlenco の 算法笔记',
+  name: ' Xlenco の Notes',
   domain: 'docs.icodeq.com',
   author: 'Xlenco',
 

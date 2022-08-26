@@ -11,7 +11,7 @@ export default siteConfig({
   // basic site info (required)
   name: ' Xlenco の 算法笔记',
   domain: 'docs.icodeq.com',
-  author: 'xlenco',
+  author: 'Xlenco',
 
   // open graph metadata (optional)
   description: 'Hello ya,  这里是 Xlneco  的 笔记站。我会将自己学习所学的知识记录在这里。',

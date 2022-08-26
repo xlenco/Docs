@@ -35,8 +35,6 @@ import { GitHubShareButton } from './GitHubShareButton'
 import { Notify } from 'notiflix/build/notiflix-notify-aio'
 import { Report } from 'notiflix/build/notiflix-report-aio'
 
-// plausible Analytics
-import Script from 'next/script'
 
 import styles from './styles.module.css'
 
@@ -321,7 +319,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
 
       <GitHubShareButton />
 
-      <Script defer data-domain="docs.icodeq.com" src="https://vercel.site.icodeq.com/js/script.js"></Script>
+
     </>
   )
 }
